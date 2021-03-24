@@ -18,9 +18,13 @@ add_definitions(
 # Source code
 file(GLOB Sources
 	Source/*.hpp
-	Source/*.cxx)
+	Source/*.cxx
+    Source/Game/*.hpp
+    Source/Game/*.cxx
+    Source/Core/*.hpp
+    Source/Core/*.cxx)
 
-add_executable(${PROJECT_NAME} ${Sources} Source/game.cxx)
+add_executable(${PROJECT_NAME} ${Sources})
 # target_link_libraries(${PROJECT_NAME} ${ALL_LIBS})
 
 # Xcode and Visual working directories
