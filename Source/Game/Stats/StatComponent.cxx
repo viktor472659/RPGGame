@@ -1,16 +1,16 @@
 
 #include <iostream>
+#include <utility>
 
 #include "StatComponent.hpp"
 
-StatComponent::StatComponent( const std::string &inName, int inLevel )
-    : mName(inName)
+StatComponent::StatComponent( std::string inName, int inLevel )
+    : mName(std::move(inName))
     , mLevel(inLevel)
 { 
     memset( &mStat, 0, sizeof(StatComponentData) );
 }
 
-// error: an initializer for a delegating constructor must appear alone
 StatComponent::StatComponent( const std::string &inName, int inLevel, const StatComponentData &inData )
     : StatComponent(inName, inLevel)
 { 
@@ -22,9 +22,6 @@ StatComponent::StatComponent( const std::string &inName, int inLevel, const Stat
 void StatComponent::Render()
 {
     std::cout << "Render stat component\n";
-    std::cout << "Health: " << mStat.Health << "\n";
-    std::cout << "Speed: " << mStat.Speed << "\n";
-    std::cout << "--------------------------\n";
 }
 
 void StatComponent::Update() 

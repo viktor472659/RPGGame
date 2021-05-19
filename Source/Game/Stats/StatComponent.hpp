@@ -6,7 +6,7 @@
 
 #include <string>
 
-#include "../Core/Component.hpp"
+#include "../../Core/Component.hpp"
 
 struct StatComponentData
 {
@@ -19,7 +19,7 @@ struct StatComponentData
 class StatComponent : public Component
 {
 public:
-    StatComponent( const std::string &inName, int inLevel );
+    StatComponent( std::string inName, int inLevel );
     StatComponent( const std::string &inName, int inLevel, const StatComponentData &inData );
 
     /* Life-Cycle Methods */

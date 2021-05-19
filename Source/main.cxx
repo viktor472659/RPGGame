@@ -4,8 +4,8 @@
 #include "Core/Core.hpp"
 #include "Core/Utils.hpp"
 
-#include "Game/StatComponent.hpp"
-#include "Game/StatFactory.hpp"
+#include "Game/Stats/StatComponent.hpp"
+#include "Game/Stats/StatFactory.hpp"
 #include "Core/Actor.hpp"
 
 // Entry point

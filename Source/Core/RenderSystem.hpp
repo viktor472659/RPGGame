@@ -5,7 +5,6 @@
 #define _RENDER_SYSTEM_HPP_
 
 #include "System.hpp"
-#include "../Game/MeshComponent.hpp"
 
 #include <vector>
 #include <map>
@@ -28,9 +27,6 @@ public:
 
     void Render();
     
-    void RegisterMeshComponent( MeshComponent* inComponent );
-    void UnregisterMeshComponent( MeshComponent* inComponent ) { }
-
     // Flyweight
     bool LoadMesh( const std::string &inFileName, MeshData &outData )
     {
@@ -53,7 +49,6 @@ public:
     }
 
 private:
-    std::vector< MeshComponent* > mComponents;
 
     std::map< std::string, MeshData > mMeshCache;
 };
