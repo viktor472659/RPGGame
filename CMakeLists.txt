@@ -21,12 +21,16 @@ file(GLOB Sources
         Source/*.cxx
         Source/Core/*.hpp
         Source/Core/*.cxx
+        Source/Core/Steps/*.hpp
+        Source/Core/Steps/*.cxx
         Source/Game/*.hpp
         Source/Game/*.cxx
         Source/Game/Dialogue/*.hpp
         Source/Game/Dialogue/*.cxx
         Source/Game/Stats/*.cxx
         Source/Game/Stats/*.hpp
+        Source/Game/Drops/*.cxx
+        Source/Game/Drops/*.hpp
         )
 
 add_executable(${PROJECT_NAME} ${Sources} Source/main.cxx)

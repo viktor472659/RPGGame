@@ -21,6 +21,8 @@ public:
 
     void userChoice(string choice);
 
+    static string askUser(const vector<string> &variants);
+
 private:
     const string description;
     const vector<string> choices;

@@ -1,7 +1,6 @@
-
 #include "StatFactory.hpp"
 
-StatComponentData StatFactory::CreateStatData(CharacterType inType, float complexityLevel = 1.0) {
+StatComponentData StatFactory::CreateStatData(CharacterType inType, float complexityLevel) {
     switch (inType) {
         case CharacterType::Ranger:
             return GetRangerData(complexityLevel);
@@ -16,18 +15,18 @@ StatComponentData StatFactory::CreateStatData(CharacterType inType, float comple
 
 StatComponentData StatFactory::GetRangerData(float complexityLevel) {
     StatComponentData data{};
-    data.Health = (int)(50 * complexityLevel);
+    data.Health = (int) (50 * complexityLevel);
     data.Speed = 80;
-    data.Attack = (int)(50 * complexityLevel);
+    data.Attack = (int) (50 * complexityLevel);
     data.Defense = 20;
     return data;
 }
 
 StatComponentData StatFactory::GetRogueData(float complexityLevel) {
     StatComponentData data{};
-    data.Health = (int)(70 * complexityLevel);
+    data.Health = (int) (70 * complexityLevel);
     data.Speed = 60;
-    data.Attack = (int)(60 * complexityLevel);
+    data.Attack = (int) (60 * complexityLevel);
     data.Defense = 40;
     return data;
 }

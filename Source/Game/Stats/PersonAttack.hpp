@@ -15,6 +15,8 @@ public:
 
     StatComponentData attack(StatComponentData target);
 
+    StatComponentData getStats() { return this->stats; }
+
 protected:
     StatComponentData stats{};
 };

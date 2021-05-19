@@ -24,15 +24,11 @@ void Core::DestroySystems()
 
 void Core::RunGameLoop()
 {
-   // while (!mQuit)
     for (int i = 0; i < 2; i++)
     {
-        //some usefull code here
 
 		mRenderer->Render();
 
-		// render audio
-		// update AI
     }
 }
 

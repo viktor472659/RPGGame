@@ -8,12 +8,19 @@
 
 #include "../../Core/Component.hpp"
 
+struct Talents
+{
+    bool Critical = false;
+    bool FrostArmor = false;
+};
+
 struct StatComponentData
 {
     int Health;
     int Attack;
     int Speed;
     int Defense;
+    Talents Talents;
 };
 
 class StatComponent : public Component

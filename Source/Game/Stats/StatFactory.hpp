@@ -5,7 +5,7 @@
 #define _STAT_FACTORY_HPP_
 
 #include "StatComponent.hpp"
-#include "../GameTypes.hpp"
+#include "../CharacterType.hpp"
 
 class StatFactory final {
 public:
@@ -14,7 +14,7 @@ public:
         return instance;
     }
 
-    StatComponentData CreateStatData(CharacterType inType, float complexityLevel);
+    StatComponentData CreateStatData(CharacterType inType, float complexityLevel = 1.0);
 
 //private:
     StatFactory() = default;
